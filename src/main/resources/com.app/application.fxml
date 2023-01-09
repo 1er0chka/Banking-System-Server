@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.app.controller.ApplicationController"
+      stylesheets="/styles/applicationStyle.css" styleClass="v-box"
+      prefHeight="600.0" prefWidth="900.0">
+    <HBox alignment="CENTER">
+        <Label text="Banking System Server" styleClass="label-header">
+            <HBox.margin>
+                <Insets top="10"/>
+            </HBox.margin>
+        </Label>
+    </HBox>
+    <HBox>
+        <VBox maxWidth="200">
+            <Label text="Список ошибок" alignment="CENTER" prefWidth="200"/>
+            <TextArea fx:id="taErrorLog" prefHeight="300" prefWidth="200" editable="false"/>
+            <HBox.margin>
+                <Insets left="20" top="20"/>
+            </HBox.margin>
+        </VBox>
+        <VBox>
+            <Label text="Журнал аудита" alignment="CENTER" prefWidth="400"/>
+            <TextArea fx:id="taAuditLog" prefHeight="300" prefWidth="400" editable="false"/>
+            <HBox.margin>
+                <Insets left="20" top="20"/>
+            </HBox.margin>
+        </VBox>
+        <VBox alignment="CENTER" maxWidth="200">
+            <Label text="Пользователи" alignment="CENTER" prefWidth="200"/>
+            <TextArea fx:id="taUsers" prefHeight="300" prefWidth="200" editable="false"/>
+            <HBox.margin>
+                <Insets left="20" top="20"/>
+            </HBox.margin>
+        </VBox>
+    </HBox>
+    <Button fx:id="btnServerState" text="Старт" prefHeight="50" prefWidth="200" onAction="#changeServerState">
+        <VBox.margin>
+            <Insets left="340" top="20"/>
+        </VBox.margin>
+    </Button>
+</VBox>
